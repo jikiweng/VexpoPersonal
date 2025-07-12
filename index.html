@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="transparent" content="true">
+    <meta name="pd-ver" content="5.0.0">
+    <link rel="stylesheet" href="css_init/vexpo_init.css"">
+    <script>
+        (() => {
+           const ua = navigator.userAgent.toLowerCase();
+           if(ua.includes("quest")){
+              const link = document.createElement("link");
+              link.rel = "stylesheet";
+              link.href = "css_init/vexpo_init_mq.css";
+              document.head.appendChild(link);
+           }
+        })();
+    </script>
+
+    <title>パーソナルデータの取扱いについて(ja)</title>
+</head>
+
+<body>
+    <div id="content" class="content">
+    <div id="scroll-progress">0%</div>
+        <div id="personal" class="personal">
+
+        <h2>パーソナルデータの取扱いについて</h2>
+        <p>
+本バーチャル万博アプリは以下の機能を利用します。<br/>
+カメラの利用/GPSの利用<br/>
+<br/>
+カメラから取得したデータはARコンテンツ表示のためGoogle LLC及びその完全子会社に提供します。<br/>
+（株）NTTコノキューは現在地およびコンテンツまでの距離を表示するために位置情報を取得します。<br/>
+位置情報の取り扱いに関する詳細はプライバシーポリシーをご参照ください。<br/></p><br/>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="js_init/vexpo_init.js"></script>
+</html>
