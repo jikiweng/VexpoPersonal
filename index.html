@@ -4,19 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="transparent" content="true">
-    <meta name="pd-ver" content="5.0.0">
-    <link rel="stylesheet" href="css_init/vexpo_init.css"">
-    <script>
-        (() => {
-           const ua = navigator.userAgent.toLowerCase();
-           if(ua.includes("quest")){
-              const link = document.createElement("link");
-              link.rel = "stylesheet";
-              link.href = "css_init/vexpo_init_mq.css";
-              document.head.appendChild(link);
-           }
-        })();
-    </script>
+    <meta name="ts-ver" content="5.0.0">
+    <meta name="pp-ver" content="5.0.0">
+    <meta name="cp-ver" content="5.0.0">
+    
+    <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.min.css">
+	<link rel="stylesheet" href="vexpo_init.css">
 
     <title>パーソナルデータの取扱いについて(ja)</title>
 </head>
@@ -36,6 +29,7 @@
 位置情報の取り扱いに関する詳細はプライバシーポリシーをご参照ください。<br/></p><br/>
         </div>
     </div>
+    <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+    <script type="text/javascript" src="vexpo_init.js"></script>
 </body>
-<script type="text/javascript" src="js_init/vexpo_init.js"></script>
 </html>
