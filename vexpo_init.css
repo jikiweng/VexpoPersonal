@@ -82,7 +82,7 @@ td, th {
 }
 
 #scroll-progress {
-      visibility: hidden;
+      visibility: visible;
       position: fixed;
       top: 10px;
       right: 0%;
@@ -97,27 +97,67 @@ td, th {
      overflow-wrap: break-word;
 }
 
-::-webkit-scrollbar {
-    width: 20px;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background-image: url('https://i.postimg.cc/J43BmkcJ/botton.png'); 
-    background-size: 80% 50%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: transparent;
-    border-radius: 6px;
-    height: 80px; 
-  }
-  
-  ::-webkit-scrollbar-track {
+.simplebar-track.simplebar-vertical {
+    display: block !important;
+    right: 0;
+}
+
+.meta-quest .simplebar-track.simplebar-vertical {
+    display: none !important;
+}
+
+.custom-scrollbar {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 27px; 
+    height: 100vh;
+    z-index: 1000;
+    display: none; 
+}
+
+.meta-quest .custom-scrollbar {
+    display: block;
+}
+
+.scroll-track {
+    position: absolute;
+    top: 0;
+    width: 27px;
+    height: 100%;
     background:
-      url('https://i.postimg.cc/d065ncRf/2025-07-11-201925.png') no-repeat top,
-      url('https://i.postimg.cc/fWVh38Ds/2025-07-11-201948.png') no-repeat bottom,
-      url('https://i.postimg.cc/hjJ3G3x3/2025-07-11-202015.png') repeat-y center;
-    background-size:
-      100% auto,
-      100% auto,
-      100% auto;
-  }
+        url('https://i.postimg.cc/d065ncRf/2025-07-11-201925.png') no-repeat top center,
+        url('https://i.postimg.cc/fWVh38Ds/2025-07-11-201948.png') no-repeat bottom center,
+        url('https://i.postimg.cc/hjJ3G3x3/2025-07-11-202015.png') repeat-y center;
+    background-size: 100% 27px, 100% 27px, 100% auto;
+}
+
+.scroll-up-area,
+.scroll-down-area {
+    position: absolute;
+    width: 27px;
+    height: 27px;
+    cursor: pointer;
+    z-index: 1002;
+}
+
+.scroll-up-area {
+    top: 0;
+}
+
+.scroll-down-area {
+    bottom: 0;
+}
+
+.scroll-handle {
+    position: absolute;
+    width: 27px;
+    height: 40px; 
+    background: url('https://i.postimg.cc/J43BmkcJ/botton.png') no-repeat center;
+    background-size: 80% 100%;
+    cursor: grab;
+    z-index: 1003;
+    transition: all 0.2s;
+    top: 27px;
+}
+
